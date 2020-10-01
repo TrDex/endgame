@@ -16,7 +16,7 @@ int doRender_leaderboard2(SDL_Renderer *renderer, GameState *game)
     SDL_RenderCopy(renderer, game->leaders, NULL, &leaders);
 
     //leader list
-    //mx_sort_arr_int(game->x_list, 20);
+    mx_sort_arr_int(game->x_list, 20);
     init_status_x_list(game);
     //draw_status_x_list(game);
 
