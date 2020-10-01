@@ -234,7 +234,6 @@ typedef struct
     int x_i;
     int kills_score;
     int kills_list[25];
-    int kills_i;
     int kills_score_multi;
     int time, deathCountdown;
     int statusState;
@@ -292,9 +291,7 @@ void init_status_x(GameState *game);
 void draw_status_x(GameState *game);
 void shutdown_status_kills (GameState *game);
 void init_status_x_list(GameState *game);
-//void draw_status_x_list(GameState *game);
-void init_status_kills_list(GameState *game);
-//void draw_status_kills_list(GameState *game);
+void draw_status_x_list(GameState *game);
 
 //for two mods game
 void load_menu0(GameState *game);

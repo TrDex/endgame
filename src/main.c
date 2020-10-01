@@ -31,13 +31,8 @@ int main()
     gameState.x_score = 0;
     for(gameState.x_i = 0; gameState.x_i < 25; gameState.x_i++) {
         gameState.x_list[gameState.x_i] = 0;
-    }
-    gameState.kills_score = 0;
-    for(gameState.kills_i = 0; gameState.kills_i < 25; gameState.kills_i++)
-        gameState.kills_list[gameState.kills_i] = 0;
-
         //gameState.x_names[gameState.x_i] = "";
-
+    }
 
     load_menu0(&gameState);
 
@@ -170,48 +165,20 @@ int main()
     }
 
     //Shutdown game and umload all memory
-    SDL_DestroyTexture(gameState.star);
+    //SDL_DestroyTexture(gameState.star);
     //printf("EXIT\n");
-    SDL_DestroyTexture(gameState.manFrames[0]);
+    /*SDL_DestroyTexture(gameState.manFrames[0]);
     SDL_DestroyTexture(gameState.man.sheetTextureIdle);
+    SDL_DestroyTexture(gameState.man.sheetTextureRun);
     SDL_DestroyTexture(gameState.man.sheetTextureJump);
     SDL_DestroyTexture(gameState.enemy.sheetTextureRun);
     SDL_DestroyTexture(gameState.bulletTexture);
-    SDL_DestroyTexture(gameState.man.sheetTextureAttack1);
+    // SDL_DestroyTexture(gameState.man.sheetTextureAttack1);
     SDL_DestroyTexture(gameState.brick);
-/*
-    game->battleMus
-    game->bossTexture
-    game->mult
-    game->bulletTexture
-    game->secondBulletTexture
-    game->secondPlayer.sheetTextureRun2
-    game->secondPlayer.sheetTextureJump2
-    game->leaders
-    game->pause
-    game->manFrames
-    game->man.sheetTextureRun
-    game->man.sheetTextureJump
-    game->death
-    game->enemy.sheetTextureRun
-    game->enemy.sheetTextureRun2
-    game->sheetTextureBack
-    game->cloud1.sheetTextureCloud1
-    game->cloud2.sheetTextureCloud2
-    game->cloud3.sheetTextureCloud3
-    game->cloud4.sheetTextureCloud4
-    game->cloud5.sheetTextureCloud5
-    game->cloud6.sheetTextureCloud6
-    game->cloud7.sheetTextureCloud7
-    game->cloud8.sheetTextureCloud8
-    game->sheetTextureSun
-    game->sheetTextureBack2
-*/
-
     if (gameState.label != NULL)
         SDL_DestroyTexture(gameState.label);
     TTF_CloseFont(gameState.font);
-    /*for (int i = 0; i < MAX_BULLETS; i++)
+    for (int i = 0; i < MAX_BULLETS; i++)
     {
         removeBullet(&gameState, i);
     }*/
