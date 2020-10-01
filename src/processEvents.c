@@ -750,14 +750,16 @@ int processEvents2(SDL_Window *window, GameState *game)
 
     if (game->man.y >= 719 || game->man.x < 0)
     {
-        game->gameLives = 0;
+        game->gameLives--;
+        game->man.y = 19;
     }
 
     if (game->multiPlayer)
     {
         if (game->secondPlayer.y >= 719 || game->secondPlayer.x < 0)
         {
-            game->gameLives = 0;
+            game->gameLives--;
+            game->secondPlayer.y = 19;
         }
     }
 
